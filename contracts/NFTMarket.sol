@@ -157,7 +157,6 @@ function fetchMarketItems() public view returns(MarketItem[] memory) {
     }
 
     // Allows user to resell a token they have purchased
-
     function resellToken(uint256 tokenId,uint256 price) public payable {
        require(idToMarketItem[tokenId].owner ==msg.sender, "Only item owner can perform this operation"); //idtomarketitem tokenid
        require(msg.value == listingPrice, "Price must be equal to listing price"); //msg.value == listingprice
